@@ -16,7 +16,9 @@ $(function () {
                 var temp = [
                     []
                 ];
-                var xaxis = [];
+                var xaxis = [
+                    []
+                ];
                 var dataLength = Object.keys(data['Time Series (5min)']).length;
 
                 var i = 0;
@@ -25,7 +27,7 @@ $(function () {
                     if (time.substr(0, 10) != Object.keys(data['Time Series (5min)'])[0].substr(0, 10)) {
                         continue;
                     }
-                    xaxis[i] = time;
+                    xaxis[i] = [i, time.substr(11, 5)];
                     temp[i] = [i, data['Time Series (5min)'][time]['4. close']];
                     i++;
                 }
@@ -54,15 +56,11 @@ $(function () {
                 points: {
                     radius: 3,
                     show: true
-                }
+                },
             },
 
-            // xaxis: {
-            //     tickSize: [10, xaxis]
-            // }
-
             xaxis: {
-                mode: "time"
+                ticks: xaxis
             }
         };
 
