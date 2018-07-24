@@ -1,0 +1,13 @@
+#header {
+    text-align: center;
+}
+
+#title {
+    color: #ff0018;
+    font-weight: bold;
+}
+
+#flot-placeholder {
+    width: 700px;
+    height: 300px;
+}
