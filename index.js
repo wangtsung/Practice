@@ -27,7 +27,9 @@ $(function () {
                     if (time.substr(0, 10) != Object.keys(data['Time Series (5min)'])[0].substr(0, 10)) {
                         continue;
                     }
-                    xaxis[i] = [i, time.substr(11, 5)];
+                    if (i % 6 == 0) {
+                        xaxis[i] = [i, time.substr(11, 5)];
+                    }
                     temp[i] = [i, data['Time Series (5min)'][time]['4. close']];
                     i++;
                 }
@@ -60,7 +62,8 @@ $(function () {
             },
 
             xaxis: {
-                ticks: xaxis
+                ticks: xaxis,
+                axisLabelPadding: 20
             }
         };
 
