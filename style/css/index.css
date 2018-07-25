@@ -7,7 +7,9 @@
     font-weight: bold;
 }
 
-#flot-placeholder {
+#flot-placeholder-msft,
+#flot-placeholder-dis {
     width: 700px;
     height: 300px;
+    display: inline-block;
 }
