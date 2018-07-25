@@ -16,7 +16,8 @@
 </head>
 
 <body>
-    <div style="text-align: center">
+    <div style="text-align: center;padding: 0 20%;">
+
         <div id="header">
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="height: 90px;">
                 <a class="navbar-brand" href="#" id="stock">當日股票</a>
@@ -40,8 +41,39 @@
             </nav>
         </div>
 
-        <div id="flot-placeholder-msft" style="margin: 50px"></div>
-        <div id="flot-placeholder-dis" style="margin: 50px"></div>
+        <h1 style="padding-top: 20px">微軟</h1>
+        <div style="margin: 50px;">
+            <div id="flot-placeholder-msft"></div>
+        </div>
+
+        <div>
+            <table class="table table-hover">
+                <tr>
+                    <td>開盤</td>
+                    <td>當日最高</td>
+                    <td>當日最低</td>
+                </tr>
+                <tr id="contentTr-msft"></tr>
+            </table>
+        </div>
+
+        <h1 style="padding-top: 20px">迪士尼</h1>
+
+        <div style="margin: 50px 0;">
+            <div id="flot-placeholder-dis"></div>
+        </div>
+
+        <div>
+            <table class="table table-hover">
+                <tr>
+                    <td>開盤</td>
+                    <td>當日最高</td>
+                    <td>當日最低</td>
+                </tr>
+                <tr id="contentTr-dis"></tr>
+            </table>
+        </div>
+
     </div>
 
 

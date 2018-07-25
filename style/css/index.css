@@ -9,7 +9,13 @@
 
 #flot-placeholder-msft,
 #flot-placeholder-dis {
+    margin: 0 50px;
     width: 700px;
     height: 300px;
     display: inline-block;
+}
+
+.contentTr-msft td,
+.contentTr-dis td {
+    border-top: 0px;
 }

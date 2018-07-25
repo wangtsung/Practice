@@ -13,6 +13,8 @@ $(function () {
 
             type: 'GET',
             url: 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=' + symbol + '&interval=5min&apikey=40EG681TIY1NSO94',
+            //testUrl
+            //url: 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=1min&apikey=demo',
             success: function (data) {
                 var tempdata = [
                     []
@@ -92,9 +94,37 @@ $(function () {
 
     }
 
+    function getDaliyData(symbol) {
+        $.ajax({
+
+            type: 'GET',
+            url: 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=' + symbol + '&apikey=40EG681TIY1NSO94',
+            //testUrl
+            //url: 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey=demo',
+            success: function (data) {
+                if (Object.keys(data)[1] == undefined) {
+                    alert("線路繁忙請重新整理");
+                    temp = 1;
+                    console.log(temp);
+                    return;
+                }
+
+                var time = Object.keys(data['Time Series (Daily)'])[0];
+
+                var html = `<td>${data['Time Series (Daily)'][time]['1. open']}</td>
+                            <td>${data['Time Series (Daily)'][time]['2. high']}</td>
+                            <td>${data['Time Series (Daily)'][time]['3. low']}</td>`;
+
+                $("#contentTr-" + symbol).append(html);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                console.log(xhr.responseText);
+            }
+        });
+    }
     var temp = 0;
     getData("msft");
-    if (temp != 1) {
-        getData("dis");
-    }
+    getDaliyData("msft");
+    getData("dis");
+    getDaliyData("dis");
 });
