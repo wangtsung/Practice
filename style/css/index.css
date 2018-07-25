@@ -15,7 +15,7 @@
     display: inline-block;
 }
 
-.contentTr-msft td,
-.contentTr-dis td {
+#contentTr-msft td,
+#contentTr-dis td {
     border-top: 0px;
 }
