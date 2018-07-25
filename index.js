@@ -113,7 +113,8 @@ $(function () {
 
                 var html = `<td>${data['Time Series (Daily)'][time]['1. open']}</td>
                             <td>${data['Time Series (Daily)'][time]['2. high']}</td>
-                            <td>${data['Time Series (Daily)'][time]['3. low']}</td>`;
+                            <td>${data['Time Series (Daily)'][time]['3. low']}</td>
+                            <td>${data['Time Series (Daily)'][time]['4. close']}</td>`;
 
                 $("#contentTr-" + symbol).append(html);
             },
