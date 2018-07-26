@@ -7,7 +7,7 @@ modify index.js
     getData("dis");
     getDaliyData("dis");
  to
- 
+    getData("msft");
     if (temp != 1) {
         getDaliyData("msft");
         getData("dis");
