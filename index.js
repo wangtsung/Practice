@@ -12,9 +12,9 @@ $(function () {
             $.ajax({
 
                 type: 'GET',
-                url: 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=' + symbol + '&interval=5min&apikey=' + apikey,
+                //url: 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=' + symbol + '&interval=5min&apikey=' + apikey,
                 //testUrl
-                //url: 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=1min&apikey=demo',
+                url: 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=1min&apikey=demo',
                 success: function (data) {
                     var tempdata = [
                         []
@@ -27,18 +27,18 @@ $(function () {
                         reject();
                     } else {
 
-                        var dataLength = Object.keys(data['Time Series (5min)']).length;
+                        var dataLength = Object.keys(data['Time Series (1min)']).length;
 
                         var i = 0;
                         for (var j = (dataLength - 1); j >= 0; j--) {
-                            var time = Object.keys(data['Time Series (5min)'])[j];
-                            if (time.substr(0, 10) != Object.keys(data['Time Series (5min)'])[0].substr(0, 10)) {
+                            var time = Object.keys(data['Time Series (1min)'])[j];
+                            if (time.substr(0, 10) != Object.keys(data['Time Series (1min)'])[0].substr(0, 10)) {
                                 continue;
                             }
                             if (i % 6 == 0) {
                                 xaxis[i] = [i, time.substr(11, 5)];
                             }
-                            tempdata[i] = [i, data['Time Series (5min)'][time]['4. close']];
+                            tempdata[i] = [i, data['Time Series (1min)'][time]['4. close']];
                             i++;
                         }
                         makeFlot(tempdata, xaxis, symbol);
@@ -99,9 +99,9 @@ $(function () {
             $.ajax({
 
                 type: 'GET',
-                url: 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=' + symbol + '&apikey=' + apikey,
+                //url: 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=' + symbol + '&apikey=' + apikey,
                 //testUrl
-                //url: 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey=demo',
+                url: 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey=demo',
                 success: function (data) {
                     if (Object.keys(data)[1] == undefined) {
                         reject();
