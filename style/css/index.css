@@ -1,18 +1,16 @@
-#header {
+#flot-placeholder-msft,
+#flot-placeholder-dis {
+    margin: 35px auto;
+    width: 700px;
+    height: 300px;
+}
+
+h1 {
     text-align: center;
 }
 
-#title {
-    color: #ff0018;
-    font-weight: bold;
-}
-
-#flot-placeholder-msft,
-#flot-placeholder-dis {
-    margin: 0 50px;
-    width: 700px;
-    height: 300px;
-    display: inline-block;
+td {
+    margin: 0 auto;
 }
 
 #contentTr-msft td,

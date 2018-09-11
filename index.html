@@ -16,13 +16,12 @@
 </head>
 
 <body>
-    <div style="text-align: center;padding: 0 20%;">
-
+    <div>
         <div id="header">
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="height: 90px;">
                 <a class="navbar-brand" href="#" id="stock">當日股票</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -40,42 +39,44 @@
                 </div>
             </nav>
         </div>
-
-        <h1 style="padding-top: 20px">微軟</h1>
-        <div style="margin: 50px;">
-            <div id="flot-placeholder-msft"></div>
-        </div>
-
+    </div>
+    <div class="container">
         <div>
-            <table class="table table-hover">
-                <tr>
-                    <td>開盤</td>
-                    <td>當日最高</td>
-                    <td>當日最低</td>
-                    <td>當前價格</td>
-                </tr>
-                <tr id="contentTr-msft"></tr>
-            </table>
+            <h1>微軟</h1>
+            <div>
+                <div id="flot-placeholder-msft"></div>
+            </div>
+
+            <div style="margin:auto">
+                <table class="table table-hover">
+                    <tr>
+                        <td>開盤</td>
+                        <td>當日最高</td>
+                        <td>當日最低</td>
+                        <td>當前價格</td>
+                    </tr>
+                    <tr id="contentTr-msft"></tr>
+                </table>
+            </div>
+
+            <h1 style="padding-top: 20px">迪士尼</h1>
+
+            <div>
+                <div id="flot-placeholder-dis"></div>
+            </div>
+
+            <div>
+                <table class="table table-hover">
+                    <tr>
+                        <td>開盤</td>
+                        <td>當日最高</td>
+                        <td>當日最低</td>
+                        <td>當前價格</td>
+                    </tr>
+                    <tr id="contentTr-dis"></tr>
+                </table>
+            </div>
         </div>
-
-        <h1 style="padding-top: 20px">迪士尼</h1>
-
-        <div style="margin: 50px 0;">
-            <div id="flot-placeholder-dis"></div>
-        </div>
-
-        <div>
-            <table class="table table-hover">
-                <tr>
-                    <td>開盤</td>
-                    <td>當日最高</td>
-                    <td>當日最低</td>
-                    <td>當前價格</td>
-                </tr>
-                <tr id="contentTr-dis"></tr>
-            </table>
-        </div>
-
     </div>
 
 
